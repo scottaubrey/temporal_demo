@@ -31,4 +31,4 @@ run-conversation:
 	tctl wf run -tq demo -wt conversation -wid conversation
 
 send-name:
-	tctl wf signal -wid conversation -n send -i '"Scott"'
+	tctl wf signal -wid conversation -n respond -i '"Scott"'
