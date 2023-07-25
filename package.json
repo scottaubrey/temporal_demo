@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@temporalio/activity": "^1.8.1",
+    "@temporalio/client": "^1.8.1",
+    "@temporalio/worker": "^1.8.1",
+    "@temporalio/workflow": "^1.8.1",
+    "@types/node": "^20.4.4",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  }
+}
