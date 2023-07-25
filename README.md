@@ -1,4 +1,4 @@
-# Temporal demo for eLife Tech unconf July 2023
+# Temporal demo for eLife Tech unconf July 2023
 
 This is a small demo code of a subset of Temporal workflows features. For the demo, it was written around the say command, which is macos only, but you can still run the examples by altering the say.sh to run something else.
 
