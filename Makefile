@@ -25,10 +25,10 @@ open-dashboard:
 
 
 run-monologue:
-	tctl wf run -tq demo -wt monologue -wid monologue
+	temporal workflow execute -t demo -type monologue -w monologue
 
 run-conversation:
-	tctl wf run -tq demo -wt conversation -wid conversation
+	temporal workflow execute -t demo -type conversation -w conversation
 
 send-name:
-	tctl wf signal -wid conversation -n respond -i '"Scott"'
+	temporal workflow signal -w conversation --name respond -i '"Scott"'

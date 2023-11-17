@@ -6,7 +6,6 @@ This is a small demo code of a subset of Temporal workflows features. For the de
 
 Install:
 - [Temporal CLI](https://docs.temporal.io/dev-guide/typescript/foundations#run-a-development-server)
-- [tctl](https://docs.temporal.io/tctl-v1/#install)
 - nvm
 - yarn
 - make
