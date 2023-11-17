@@ -13,6 +13,10 @@ async function run() {
     taskQueue: 'demo',
     workflowsPath: require.resolve('./workflows'),
     activities,
+    maxCachedWorkflows: 0,
+    maxConcurrentActivityTaskExecutions: 1,
+    maxConcurrentWorkflowTaskExecutions: 1,
+    maxConcurrentLocalActivityExecutions: 1
   });
 
   await worker.run();

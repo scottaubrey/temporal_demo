@@ -2,7 +2,7 @@ import { condition, defineQuery, proxyActivities, setHandler, sleep } from '@tem
 import type * as activities from './activities';
 import { defineSignal } from '@temporalio/workflow';
 
-const { sayMessage } = proxyActivities<typeof activities>({
+const { sayMessage, useMemoryAndSleep } = proxyActivities<typeof activities>({
   startToCloseTimeout: '30 seconds',
 });
 
@@ -60,4 +60,36 @@ export const conversation = async () => {
 
   question = null;
   await sayMessage(`Nice to meet you ${answer}`);
+};
+
+
+
+
+
+
+
+/*
+ * Simple Workflow to use memory and sleep
+ */
+export const useMemoryInWorkflow = async () => {
+  console.log('use memory');
+  const a = []
+  for (let i = 0; i < 100000000; i++) {
+    a.push(i)
+  }
+
+  console.log('sleep 20 seconds');
+  await sleep('20 seconds');
+
+  console.log('all done!');
+};
+
+/*
+ * Simple Workflow to use memory in an activity and sleep
+ */
+export const useMemoryInActivity = async () => {
+  console.log('use memory and sleep');
+  await useMemoryAndSleep();
+
+  console.log('all done!');
 };

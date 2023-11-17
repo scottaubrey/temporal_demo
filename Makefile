@@ -32,3 +32,11 @@ run-conversation:
 
 send-name:
 	temporal workflow signal -w conversation --name respond -i '"Scott"'
+
+
+
+run-memory-in-workflow:
+	temporal workflow execute -t demo -type useMemoryInWorkflow -w useMemoryInWorkflow
+
+run-memory-in-activity:
+	temporal workflow execute -t demo -type useMemoryInActivity -w useMemoryInActivity
